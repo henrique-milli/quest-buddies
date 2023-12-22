@@ -1,0 +1,23 @@
+.progress-bar {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    height: 20px; /* Adjust height as needed */
+    background-color: #ffffff; /* Background color of the unfilled bar */
+    border-radius: 10px; /* Optional: rounded corners */
+    overflow: hidden;
+    border: 1px solid var(--light-gray);
+}
+
+.slot {
+    flex: 1;
+    transition: background-color 0.3s ease; /* Animation for filling effect */
+}
+
+.slot:not(:last-child) {
+    border-right: 1px solid var(--light-gray);
+}
+
+.filled {
+    background-color: #25d366; /* Color of the filled slots */
+}
