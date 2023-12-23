@@ -3,6 +3,7 @@ import {Inter} from 'next/font/google'
 import './globals.css'
 import ReduxProvider from "@/app/_redux/provider";
 import React from "react";
+import {Analytics}  from "@vercel/analytics/react";
 
 const inter = Inter({subsets: ['latin']})
 
@@ -19,6 +20,7 @@ export default function RootLayout({
         <html lang="en">
             <body className={inter.className}>
                 <ReduxProvider>{children}</ReduxProvider>
+                <Analytics/>
             </body>
         </html>
     )

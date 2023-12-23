@@ -24,7 +24,7 @@ body {
 #app-container {
   width: 100%;
   max-width: 450px; /* Max width for larger devices */
-  height: 100vh; /* Full viewport height */
+  height: 100%; /* Full viewport height */
   max-height: 950px; /* Max height for larger devices */
   margin: auto; /* Centering the container */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow for depth effect */

@@ -60,7 +60,7 @@ const askQuestion = async (q: Question, isTutorial = false) => {
     // Wait for the user to answer
     const userAnswer = await waitForUserReply();
     // if answer is correct add 1 to counter
-    if (userAnswer === q.answer) {
+    if (userAnswer.toLowerCase() === q.answer) {
         await delayedTyping([{text: 'Esatto!', isUser: false, isImage: false}])
         store.dispatch(updateCounter(store.getState().chatState.counter + 1));
     } else {
@@ -106,7 +106,7 @@ const delayedTyping = async (messages: ChatMessage[]) => {
     }
 
 }
-const waitForUserReply = () => {
+const waitForUserReply = (): Promise<string> => {
     return new Promise((resolve) => {
         const unsubscribe = store.subscribe(() => {
             const state = store.getState();
